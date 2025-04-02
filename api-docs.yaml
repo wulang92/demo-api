@@ -8,20 +8,20 @@ spec:
   lifecycle: production
   owner: user-guest
   system: api-docs
-  definition: |
+  definition:
     openapi: "3.1.0"
     info:
       title: OpenAPI definition
       version: v0
     servers:
     - url: http://localhost:8080
-      description: Generated server url
+      description: "Generated server url"
     paths:
       /api/post:
         post:
           tags:
           - demo-controller
-          operationId: apiPost
+          operationId: "apiPost"
           requestBody:
             content:
               application/json:
@@ -30,37 +30,37 @@ spec:
             required: true
           responses:
             "200":
-              description: OK
+              description: "OK"
               content:
                 '*/*':
                   schema:
-                    type: object
+                    type: "object"
       /api/get:
         get:
           tags:
           - demo-controller
-          operationId: apiGet
+          operationId: "apiGet"
           parameters:
-          - name: userId
-            in: query
+          - name: "userId"
+            in: "query"
             required: true
             schema:
-              type: integer
-              format: int64
+              type: "integer"
+              format: "int64"
           responses:
             "200":
-              description: OK
+              description: "OK"
               content:
                 '*/*':
                   schema:
-                    type: object
+                    type: "object"
     components:
       schemas:
         DemoRequest:
-          type: object
+          type: "object"
           properties:
             userId:
-              type: integer
-              format: int64
+              type: "integer"
+              format: "int64"
             desc:
-              type: string
+              type: "string"
