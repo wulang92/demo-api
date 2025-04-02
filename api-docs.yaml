@@ -6,8 +6,8 @@ metadata:
 spec:
   type: openapi
   lifecycle: production
-  owner: user:guest
-  system: artist-engagement-portal
+  owner: user-guest
+  system: api-docs
   definition:
     openapi: 3.1.0
     info:
