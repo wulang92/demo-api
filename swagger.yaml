@@ -7,6 +7,7 @@ spec:
   type: openapi
   lifecycle: production
   owner: user:guest
+  system: artist-engagement-portal
   definition: |
     $text: https://petstore.swagger.io/v2/swagger.json
     swagger: "2.0"
