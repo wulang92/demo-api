@@ -11,16 +11,16 @@ spec:
   definition:
     openapi: "3.1.0"
     info:
-      title: OpenAPI definition
-      version: v0
+      title: "OpenAPI definition"
+      version: "v0"
     servers:
-    - url: http://localhost:8080
+    - url: "http://localhost:8080"
       description: "Generated server url"
     paths:
       /api/post:
         post:
           tags:
-          - demo-controller
+          - "demo-controller"
           operationId: "apiPost"
           requestBody:
             content:
@@ -38,7 +38,7 @@ spec:
       /api/get:
         get:
           tags:
-          - demo-controller
+          - "demo-controller"
           operationId: "apiGet"
           parameters:
           - name: "userId"
