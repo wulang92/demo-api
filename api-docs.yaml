@@ -9,7 +9,7 @@ spec:
   owner: user-guest
   system: api-docs
   definition: |
-    openapi: 3.1.0
+    openapi: "3.1.0"
     info:
       title: OpenAPI definition
       version: v0
