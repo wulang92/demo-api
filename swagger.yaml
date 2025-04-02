@@ -8,7 +8,7 @@ spec:
   lifecycle: production
   owner: user:guest
   system: artist-engagement-portal
-  definition:
+  definition: |
     $text: https://petstore.swagger.io/v2/swagger.json
     swagger: "2.0"
     info:
