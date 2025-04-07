@@ -9,4 +9,4 @@ spec:
   owner: wulang-spring
   system: api-docs
   definition:
-    $text: https://github.com/wulang92/demo-api/blob/main/spring-generated.yaml
+    $text: https://github.com/wulang92/demo-api/blob/main/spring-generated.yaml #Open API spec on another public URL
