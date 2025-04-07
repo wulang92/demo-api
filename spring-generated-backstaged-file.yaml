@@ -8,5 +8,5 @@ spec:
   lifecycle: production
   owner: wulang-spring
   system: api-docs
-  definition: |
+  definition:
     $text: http://localhost:8080/v3/api-docs
