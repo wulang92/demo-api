@@ -1,0 +1,12 @@
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: spring-generated-demo-file
+  description: Backstaged Swagger Spring Sample REST API
+spec:
+  type: openapi
+  lifecycle: production
+  owner: wulang-spring
+  system: api-docs
+  definition:
+    $text: http://localhost:8080/v3/api-docs
