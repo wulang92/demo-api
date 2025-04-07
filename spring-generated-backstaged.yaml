@@ -1,55 +1,66 @@
-openapi: 3.1.0
-info:
-  title: OpenAPI definition
-  version: v0
-servers:
-- url: http://localhost:8080
-  description: Generated server url
-paths:
-  /api/post:
-    post:
-      tags:
-      - demo-controller
-      operationId: apiPost
-      requestBody:
-        content:
-          application/json:
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: spring-generated-demo
+  description: Backstaged Swagger Spring Sample REST API
+spec:
+  type: openapi
+  lifecycle: production
+  owner: wulang-spring
+  system: api-docs
+  definition: |
+    openapi: 3.1.0
+    info:
+      title: OpenAPI definition
+      version: v0
+    servers:
+    - url: http://localhost:8080
+      description: Generated server url
+    paths:
+      /api/post:
+        post:
+          tags:
+          - demo-controller
+          operationId: apiPost
+          requestBody:
+            content:
+              application/json:
+                schema:
+                  $ref: "#/components/schemas/DemoRequest"
+            required: true
+          responses:
+            "200":
+              description: OK
+              content:
+                '*/*':
+                  schema:
+                    type: object
+      /api/get:
+        get:
+          tags:
+          - demo-controller
+          operationId: apiGet
+          parameters:
+          - name: userId
+            in: query
+            required: true
             schema:
-              $ref: "#/components/schemas/DemoRequest"
-        required: true
-      responses:
-        "200":
-          description: OK
-          content:
-            '*/*':
-              schema:
-                type: object
-  /api/get:
-    get:
-      tags:
-      - demo-controller
-      operationId: apiGet
-      parameters:
-      - name: userId
-        in: query
-        required: true
-        schema:
-          type: integer
-          format: int64
-      responses:
-        "200":
-          description: OK
-          content:
-            '*/*':
-              schema:
-                type: object
-components:
-  schemas:
-    DemoRequest:
-      type: object
-      properties:
-        userId:
-          type: integer
-          format: int64
-        desc:
-          type: string
+              type: integer
+              format: int64
+          responses:
+            "200":
+              description: OK
+              content:
+                '*/*':
+                  schema:
+                    type: object
+    components:
+      schemas:
+        DemoRequest:
+          type: object
+          properties:
+            userId:
+              type: integer
+              format: int64
+            desc:
+              type: string
