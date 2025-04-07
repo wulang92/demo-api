@@ -9,4 +9,4 @@ spec:
   owner: wulang-spring
   system: api-docs
   definition:
-    $text: http://localhost:8080/v3/api-docs
+    $text: https://github.com/wulang92/demo-api/blob/main/spring-generated.yaml
