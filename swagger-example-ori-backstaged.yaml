@@ -1,7 +1,7 @@
 apiVersion: backstage.io/v1alpha1
 kind: API
 metadata:
-  name: backstage petstore
+  name: backstage-petstore
   description: Backstaged Swagger PetStore Sample REST API
 spec:
   type: openapi
